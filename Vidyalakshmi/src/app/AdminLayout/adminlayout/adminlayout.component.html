@@ -1,0 +1,15 @@
+<div class="wrapper">
+    <div class="sidebar" data-color="white" data-active-color="danger">
+       <app-sidenav></app-sidenav>
+    </div>
+    <div class="main-panel">
+        <!-- <navbar-cmp></navbar-cmp> -->
+        <app-topbar></app-topbar>
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+        <!-- <footer-cmp></footer-cmp> -->
+        <app-footer></app-footer>
+    </div>
+</div>
+<fixedplugin-cmp></fixedplugin-cmp>

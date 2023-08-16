@@ -1,0 +1,94 @@
+<div class="card" style="width: 40rem;">
+    <div class="card-body">
+        <form [formGroup]="enquiry">
+            <h3>Enquiry  form</h3>
+            <div class="input-group mb-3">
+              <input hidden="on" type="number" class="form-control" placeholder="enquiryid" formControlName="enquiryid" [value]="0">
+            </div >
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">name</span>
+                <input type="text" class="form-control" placeholder="name" formControlName="name" >
+              </div >
+              <div  *ngIf="e['name'].touched && e['name'].errors?.['required']" class="text-danger error, input-group mb-3">
+                name required</div>
+                
+        
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Date of birth</span>
+                    <input type="date" class="form-control" placeholder="dob" formControlName="dob" >
+                  </div >
+                  <div  *ngIf="e['dob'].touched && e['dob'].errors?.['required']" class="text-danger error, input-group mb-3">
+                    Date of birth required</div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Gender</span>
+                        <input type="text" class="form-control" placeholder="gender" formControlName="gender" >
+                      </div >
+                      <div  *ngIf="e['gender'].touched && e['gender'].errors?.['required']" class="text-danger error, input-group mb-3">
+                        Gender required</div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">category</span>
+                            <input type="text" class="form-control" placeholder="category" formControlName="category" >
+                          </div >
+                          <div  *ngIf="e['category'].touched && e['category'].errors?.['required']" class="text-danger error, input-group mb-3">
+                            category required</div>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">email</span>
+                                <input type="email" class="form-control" placeholder="email" formControlName="email" >
+                              </div >
+                              <div  *ngIf="e['email'].touched && e['email'].errors?.['required']" class="text-danger error, input-group mb-3">
+                                email required</div>
+
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">Moble no</span>
+                                    <input type="number" class="form-control" placeholder="moble" formControlName="moble" >
+                                  </div >
+                                  <div  *ngIf="e['moble'].touched && e['moble'].errors?.['required']" class="text-danger error, input-group mb-3">
+                                    moble no. required</div>
+
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1">aadhar</span>
+                                        <input type="number" class="form-control" placeholder="aadhar" formControlName="aadhar" >
+                                      </div >
+                                      <div  *ngIf="e['aadhar'].touched && e['aadhar'].errors?.['required']" class="text-danger error, input-group mb-3">
+                                        aadhar required</div>
+
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1">Annual family income</span>
+                                            <input type="number" class="form-control" placeholder="Annual family income" formControlName="annualfamilyincome" >
+                                          </div >
+                                          <div  *ngIf="e['annualfamilyincome'].touched && e['annualfamilyincome'].errors?.['required']" class="text-danger error, input-group mb-3">
+                                            annual family income required</div>
+
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text" id="basic-addon1">Required loan amount </span>
+                                                <input type="number" class="form-control" placeholder="required loan amount" formControlName="loanrangeAmount" >
+                                              </div >
+                                              <div  *ngIf="e['loanrangeAmount'].touched && e['loanrangeAmount'].errors?.['required']" class="text-danger error, input-group mb-3">
+                                                loan  Amount required</div>
+
+                                                <div class="input-group mb-3">
+                                                  <input type="text" hidden="on" class="form-control" placeholder="status" formControlName="status" [value]="" >
+                                                </div >
+                                                <div class="input-group mb-3">
+                                                  <span class="input-group-text" id="basic-addon1">educationtype</span>
+                                                  <input type="text" class="form-control" placeholder="educationtype" formControlName="educationtype" >
+                                                </div >
+                                                <div  *ngIf="e['educationtype'].touched && e['educationtype'].errors?.['required']" class="text-danger error, input-group mb-3">
+                                                  educationtype required</div>
+
+                                                  <div class="input-group mb-3">
+                                                    <span class="input-group-text" id="basic-addon1">city</span>
+                                                    <input type="text" class="form-control" placeholder="city" formControlName="city" >
+                                                  </div >
+                                                  <div  *ngIf="e['city'].touched && e['city'].errors?.['required']" class="text-danger error, input-group mb-3">
+                                                    city required</div>
+
+                                                <div class="d-flex p-2 justify-content-between">
+                                                    <button  class="btn btn-success" (click)="onSubmit()">Submit Enquiry</button> 
+                                                    
+                                                  </div>
+        </form>
+    </div>
+</div>
