@@ -9,7 +9,7 @@ export class Enquiry {
     aadhar:number;
     annualfamilyincome:number;
     loanrangeAmount:number;
-    status:string
+    enquiryStatus:string
     educationtype:string
     city:string
 
