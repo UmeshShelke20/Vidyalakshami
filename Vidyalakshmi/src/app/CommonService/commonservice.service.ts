@@ -19,4 +19,8 @@ export class CommonserviceService {
     return this.http.post(this.url+"submitEnquiry",en,{responseType:'text' as 'json'})
    }
 
+   viewAllEnquiry(){
+    return this.http.get(this.url+"viewAllEnquiry")
+   }
+
 }

@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   }
   log()
   {
-  this.route.navigate(["/log"])
+  this.route.navigate(["/home/log/login"])
   }
 
 }
