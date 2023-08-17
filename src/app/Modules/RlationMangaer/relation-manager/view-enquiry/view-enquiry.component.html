@@ -1,0 +1,78 @@
+
+
+<!-- {{allEnquiry |json}} -->
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title ">All Enquiry</h4>
+                        <p class="card-category"> Enquiry on Relation manager desk</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                   
+                                    <th>
+                                        Enquiryid
+                                    </th>
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        D.O.B
+                                    </th>
+                                    <th>
+                                        Gender
+                                    </th>
+                                    <th>
+                                        Category
+                                    </th>
+                                    <th>
+                                        Email
+                                    </th>
+                                    <th>
+                                        Mobile
+                                    </th>
+                                    <th>
+                                        Aadhar  
+                                    </th>
+                                    <th>
+                                        Annual family income
+                                    </th>
+                                    <th>loan range Amount</th>
+                                    <th>
+                                        status
+                                    </th>
+                                    <th>educationtype</th>
+                                    <th>city</th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let s of allEnquiry">
+                                <td>{{s.enquiryid}}</td>
+                                <td>{{s.name}}</td>
+                                <td>{{s.dob}}</td>
+                                <td>{{s.gender}}</td>
+                                <td>{{s.category}}</td>
+                                <td>{{s.email}}</td>
+                                <td>{{s.moble}}</td>
+                                <td>{{s.aadhar}}</td>
+                                <td class="text-primary">{{s.annualfamilyincome}}</td>
+                                <td class="text-primary">{{s.loanrangeAmount}}</td>
+                                <td>{{s.status}}</td>
+                                <td>{{s.educationtype}}</td>
+                                <td>{{s.city}}</td>
+                                    </tr> 
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+  </div>
+  

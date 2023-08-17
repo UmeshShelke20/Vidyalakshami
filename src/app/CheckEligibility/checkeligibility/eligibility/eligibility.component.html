@@ -1,0 +1,74 @@
+<div class="card" style="width: 40rem;">
+    <div class="card-body">
+        <form [formGroup]="eligibility">
+            <h3>Eligibility Cheacking form</h3>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Nationality</span>
+                <input type="text" class="form-control" placeholder="Nationality" formControlName="nationality" >
+              </div >
+              <div  *ngIf="e['nationality'].touched && e['nationality'].errors?.['required']" class="text-danger error, input-group mb-3">
+                nationality required</div>
+                
+        
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Category</span>
+                    <input type="text" class="form-control" placeholder="Category" formControlName="category" >
+                  </div >
+                  <div  *ngIf="e['category'].touched && e['category'].errors?.['required']" class="text-danger error, input-group mb-3">
+                    Category required</div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Age</span>
+                        <input type="number" class="form-control" placeholder="age" formControlName="age" >
+                      </div >
+                      <div  *ngIf="e['age'].touched && e['age'].errors?.['required']" class="text-danger error, input-group mb-3">
+                        age required</div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">Income</span>
+                            <input type="number" class="form-control" placeholder="income" formControlName="income" >
+                          </div >
+                          <div  *ngIf="e['income'].touched && e['income'].errors?.['required']" class="text-danger error, input-group mb-3">
+                            income required</div>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Coursetype</span>
+                                <input type="text" class="form-control" placeholder="coursetype" formControlName="coursetype" >
+                              </div >
+                              <div  *ngIf="e['coursetype'].touched && e['coursetype'].errors?.['required']" class="text-danger error, input-group mb-3">
+                                coursetype required</div>
+
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">Duration</span>
+                                    <input type="number" class="form-control" placeholder="duration" formControlName="duration" >
+                                  </div >
+                                  <div  *ngIf="e['duration'].touched && e['duration'].errors?.['required']" class="text-danger error, input-group mb-3">
+                                    duration required</div>
+
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1">Course fee</span>
+                                        <input type="number" class="form-control" placeholder="coursefee" formControlName="coursefee" >
+                                      </div >
+                                      <div  *ngIf="e['coursefee'].touched && e['coursefee'].errors?.['required']" class="text-danger error, input-group mb-3">
+                                        coursefee required</div>
+
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1">Contribution amount</span>
+                                            <input type="number" class="form-control" placeholder="Contribution ammount" formControlName="contributionamount" >
+                                          </div >
+                                          <div  *ngIf="e['contributionamount'].touched && e['contributionamount'].errors?.['required']" class="text-danger error, input-group mb-3">
+                                            Contribution ammount required</div>
+
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text" id="basic-addon1">Required loan amount </span>
+                                                <input type="number" class="form-control" placeholder="requiredloanamount" formControlName="requiredloanamount" >
+                                              </div >
+                                              <div  *ngIf="e['requiredloanamount'].touched && e['requiredloanamount'].errors?.['required']" class="text-danger error, input-group mb-3">
+                                                requiredloanamount required</div>
+
+                                                <div class="d-flex p-2 justify-content-between">
+                                                    <button  class="btn btn-success" (click)="check()">Check my eligibility </button> 
+                                                    
+                                                  </div>
+        </form>
+    </div>
+</div>
