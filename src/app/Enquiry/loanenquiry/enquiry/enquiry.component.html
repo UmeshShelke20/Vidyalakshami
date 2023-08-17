@@ -69,13 +69,13 @@
                                                 loan  Amount required</div>
 
                                                 <div class="input-group mb-3">
-                                                  <input type="text" hidden="on" class="form-control" placeholder="enquiryStatus" formControlName="enquiryStatus" value="new" >
+                                                  <input type="text" hidden="on" class="form-control" placeholder="enquiryStatus" formControlName="enquiryStatus" value="New" >
                                                 </div >
                                                 <div class="input-group mb-3">
                                                   <span class="input-group-text" id="basic-addon1">educationtype</span>
-                                                  <input type="text" class="form-control" placeholder="enquiryStatus" formControlName="enquiryStatus" >
+                                                  <input type="text" class="form-control" placeholder="educationtype" formControlName="educationtype" >
                                                 </div >
-                                                <div  *ngIf="e['enquiryStatus'].touched && e['enquiryStatus'].errors?.['required']" class="text-danger error, input-group mb-3">
+                                                <div  *ngIf="e['educationtype'].touched && e['educationtype'].errors?.['required']" class="text-danger error, input-group mb-3">
                                                   educationtype required</div>
 
                                                   <div class="input-group mb-3">
