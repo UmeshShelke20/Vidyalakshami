@@ -12,6 +12,8 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatCardModule} from '@angular/material/card';
 const routes:Routes=[
   {path:'relationManager',component:RealationManagerComponent},
   {path:'viewEnquiry',component:ViewEnquiryComponent},
@@ -28,7 +30,8 @@ const routes:Routes=[
   ],
   imports: [
     CommonModule,RouterModule.forChild(routes),FormsModule,ReactiveFormsModule,
-    MatFormFieldModule,MatInputModule,MatButtonModule,MatRippleModule,MatTooltipModule,MatSelectModule
+    MatFormFieldModule,MatInputModule,MatButtonModule,MatRippleModule,MatTooltipModule,MatSelectModule,MatStepperModule,
+    MatCardModule
   ]
 })
 export class RelationManagerModule { }
