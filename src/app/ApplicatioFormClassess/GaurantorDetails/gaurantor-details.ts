@@ -1,5 +1,4 @@
 import { Address } from "../Address/address";
-import { CIBIL } from "../CIBIL/cibil";
 import { PreviousLoanDetails } from "../PreviousLoanDetails/previous-loan-details";
 
 export class GaurantorDetails {
@@ -12,7 +11,6 @@ export class GaurantorDetails {
 	occupation:string;
     panno:string;
 	relationWithStudent:string;
-	cibil:CIBIL;
     address:Address ;
     previousloandetils:PreviousLoanDetails;
 }

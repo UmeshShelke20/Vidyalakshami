@@ -52,8 +52,7 @@ this.application=new FormGroup({
     panno:new FormControl('',[Validators.required]),
 	relationWithStudent:new FormControl('',[Validators.required]),
   address:this.address,
-	cibil:this.CIBIL,
-    previousloandetils:this.PreviousLoanDetails
+	previousloandetils:this.PreviousLoanDetails
 
   }),
   // educationDetails: new FormGroup({
