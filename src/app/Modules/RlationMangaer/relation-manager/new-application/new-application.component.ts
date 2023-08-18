@@ -9,8 +9,7 @@ export class NewApplicationComponent implements OnInit {
   title = 'StepperForm';
   application:any;
 
-  CregForm: any
-  constructor(private fb: FormBuilder) { }
+  constructor() { }
 
   ngOnInit(): void {
 this.application=new FormGroup({
@@ -39,35 +38,12 @@ this.application=new FormGroup({
 
   })
 })
+}
 
-
-
-
-
-,
-    this.CregForm = this.fb.group({
-      customerId: ['', [Validators.required]],
-      customerName: ['', [Validators.required]],
-      customerDateOfBirth: ['', [Validators.required]],
-  
-      address: this.fb.group({
-        permanentAddressId: [],
-        areaname: [],
-        cityname: [],
-      }),
-
-      profession: this.fb.group({
-        professionId: [],
-        professionType: [],
-        professionSalary: [],
-
-      })
-    })
-  }
 
   saveInfo() {
 
-    console.log(this.CregForm.value);
+    console.log(this.application.value);
 
   }
 }
