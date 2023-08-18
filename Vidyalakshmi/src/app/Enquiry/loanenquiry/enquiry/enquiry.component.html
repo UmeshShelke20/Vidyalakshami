@@ -41,10 +41,10 @@
 
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">Moble no</span>
-                                    <input type="number" class="form-control" placeholder="moble" formControlName="moble" >
+                                    <input type="number" class="form-control" placeholder="mobile" formControlName="mobile" >
                                   </div >
-                                  <div  *ngIf="e['moble'].touched && e['moble'].errors?.['required']" class="text-danger error, input-group mb-3">
-                                    moble no. required</div>
+                                  <div  *ngIf="e['mobile'].touched && e['mobile'].errors?.['required']" class="text-danger error, input-group mb-3">
+                                    mobile no. required</div>
 
 
                                     <div class="input-group mb-3">
@@ -69,7 +69,7 @@
                                                 loan  Amount required</div>
 
                                                 <div class="input-group mb-3">
-                                                  <input type="text" hidden="on" class="form-control" placeholder="status" formControlName="status" [value]="" >
+                                                  <input type="text" hidden="on" class="form-control" placeholder="enquiryStatus" formControlName="enquiryStatus" value="New" >
                                                 </div >
                                                 <div class="input-group mb-3">
                                                   <span class="input-group-text" id="basic-addon1">educationtype</span>

@@ -21,11 +21,11 @@ enquiry:any
       gender:new FormControl('',[Validators.required]),
       category:new FormControl('',[Validators.required]),
       email:new FormControl('',[Validators.required]),
-      moble:new FormControl('',[Validators.required]),
+      mobile:new FormControl('',[Validators.required]),
       aadhar:new FormControl('',[Validators.required]),
       annualfamilyincome:new FormControl('',[Validators.required]),
       loanrangeAmount:new FormControl('',[Validators.required]),
-      status:new FormControl('',[Validators.required]),
+      enquiryStatus:new FormControl('',[Validators.required]),
       educationtype:new FormControl('',[Validators.required]),
       city:new FormControl('',[Validators.required]),
 

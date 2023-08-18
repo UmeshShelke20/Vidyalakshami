@@ -5,11 +5,11 @@ export class Enquiry {
     gender:string;
     category:string;
     email:string
-    moble:number;
+    mobile:number;
     aadhar:number;
     annualfamilyincome:number;
     loanrangeAmount:number;
-    status:string
+    enquiryStatus:string
     educationtype:string
     city:string
 
