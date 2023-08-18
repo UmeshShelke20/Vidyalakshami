@@ -1,5 +1,4 @@
 export class Address {
-
 id:number
 district:string
 state:string
