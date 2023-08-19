@@ -9,7 +9,7 @@
   <mat-card-content fxLayout="column" fxLayoutAlign="center center">
 <mat-vertical-stepper [linear]="false" #stepper animationDuration="2000">
   <form [formGroup]="application" (ngSubmit)="saveInfo()">
-  <mat-step label="Enquiry Personal Details">
+  <mat-step label="enquiryPersonalDetails">
     <div formGroupName="enquiryPersonalDetails">
       <ng-template matStepLabel>Enquiry Personal Details</ng-template>
       <!-- <mat-form-field>
@@ -60,7 +60,7 @@
       </div>
     </div>
   </mat-step>
-  <mat-step label="Gaurantor Details">
+  <mat-step label="gaurantorDetails">
     <div formGroupName="gaurantorDetails">
       <ng-template matStepLabel>Gaurantor Details</ng-template>
       <!-- <mat-form-field>
@@ -197,6 +197,92 @@
         <button mat-raised-button color="primary" matStepperPrevious>Back</button>
         <button mat-raised-button color="accent" matStepperNext>Next</button>
       </div>
+    </div>
+  </mat-step>
+
+  <mat-step label="educationDetails">
+    <div formGroupName="educationDetails">
+      <ng-template matStepLabel>Educational Details</ng-template>
+      <!-- <mat-form-field>
+        <input matInput type="number"  placeholder="eid" formControlName="eid">
+       </mat-form-field><br> -->
+     
+      <mat-form-field>
+        <input matInput type="text"  placeholder="Education type (Graduation, Post-graduation, etc)" formControlName="type">
+       </mat-form-field><br>
+      
+      <mat-form-field>
+        <input matInput type="text"  placeholder="Country" formControlName="country">
+       </mat-form-field><br>
+      
+      <mat-form-field>
+        <input matInput type="text"  placeholder="Duration" formControlName="duration">
+       </mat-form-field><br>
+      
+      <mat-form-field>
+        <input matInput type="number"  placeholder="Course Fees" formControlName="fees">
+       </mat-form-field><br>
+     
+      <mat-form-field>
+        <input matInput type="text"  placeholder="Institute name" formControlName="institutename">
+       </mat-form-field><br>
+      
+    
+      <div formGroupName="college">
+        <ng-template matStepLabel>College</ng-template>
+<!--         
+      <mat-form-field>
+        <input matInput type="number"  placeholder="collegeId" formControlName="collegeId">
+       </mat-form-field><br> -->
+     
+       
+        
+      <mat-form-field>
+        <input matInput type="text"  placeholder="CollegeName" formControlName="collegeName">
+       </mat-form-field><br>
+     
+        
+      <mat-form-field>
+        <input matInput type="email"  placeholder="College Email" formControlName="collegeEmail">
+       </mat-form-field><br>
+     
+        
+      <mat-form-field>
+        <input matInput type="number"  placeholder="College Mobiles" formControlName="collegeMobile">
+       </mat-form-field><br>
+     
+       
+  
+
+        <div formGroupName="collegeaddress">
+          <ng-template matStepLabel>College address</ng-template>
+    <!-- <mat-form-field >
+        <input  matInput type="number"  placeholder="id" formControlName="id" >
+       </mat-form-field><br> -->
+       <mat-form-field>
+        <input matInput type="text"  placeholder="District" formControlName="district">
+       </mat-form-field><br>
+       <mat-form-field>
+        <input matInput type="text"  placeholder="State" formControlName="state">
+       </mat-form-field><br>
+       <mat-form-field>
+        <input matInput type="text"  placeholder="City" formControlName="city">
+       </mat-form-field><br>
+       <mat-form-field>
+        <input matInput type="text"  placeholder="landmark" formControlName="landmark">
+       </mat-form-field><br>
+       <mat-form-field>
+        <input matInput type="number"  placeholder="blockno" formControlName="blockno">
+       </mat-form-field><br>
+    
+        </div>
+      </div>
+      <div>
+        <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+        <button mat-raised-button color="accent"  type="submit"  (click)="saveInfo()" >Submit</button>
+        <button mat-raised-button color="accent" matStepperNext>Next</button>
+      </div>
+
     </div>
   </mat-step>
 
