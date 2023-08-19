@@ -4,22 +4,22 @@
                   <div class="row">
                       <div class="col-md-8">
             
-<h1 style="text-align: center;">Registration Form</h1>
+<h1 style="text-align: center;"><span style="color: rgb(0, 89, 255);">Registration Form</span></h1>
 <mat-card>
   <mat-card-content fxLayout="column" fxLayoutAlign="center center">
 <mat-vertical-stepper [linear]="false" #stepper animationDuration="2000">
   <form [formGroup]="application" (ngSubmit)="saveInfo()">
-  <mat-step label="Enquiry Personal Details">
+  <mat-step label="enquiryPersonalDetails">
     <div formGroupName="enquiryPersonalDetails">
       <ng-template matStepLabel>Enquiry Personal Details</ng-template>
-      <mat-form-field>
-       <input hidden="on" matInput type="number"  placeholder="eid" formControlName="eid">
-      </mat-form-field><br>
+      <!-- <mat-form-field>
+       <input matInput type="number"  placeholder="eid" formControlName="eid">
+      </mat-form-field><br> -->
       <mat-form-field>
         <input matInput type="text"  placeholder="Full Name" formControlName="ename">
        </mat-form-field><br>
        <mat-form-field>
-        <input matInput type="text"  placeholder="Date of birth" formControlName="edob">
+        <input matInput type="date"  placeholder="Date of birth (dd/mm/yyyy) " formControlName="edob">
        </mat-form-field><br>
        <mat-form-field>
         <input matInput type="text"  placeholder="Gender" formControlName="egender">
@@ -35,9 +35,9 @@
        </mat-form-field><br>
        <div formGroupName="address">
         <ng-template matStepLabel>Applicant Address</ng-template>
-        <mat-form-field>
-          <input hidden="on" matInput type="number"  placeholder="id" formControlName="id">
-         </mat-form-field><br>
+        <!-- <mat-form-field >
+          <input  matInput type="number"  placeholder="id" formControlName="id" >
+         </mat-form-field><br> -->
          <mat-form-field>
           <input matInput type="text"  placeholder="District" formControlName="district">
          </mat-form-field><br>
@@ -56,12 +56,143 @@
        </div>
       <div class="example-button-row">
         <button  mat-raised-button color="accent" matStepperNext>Next</button>
+        
       </div>
     </div>
   </mat-step>
-  <mat-step label="Profession">
-    <div formGroupName="profession">
-      <ng-template matStepLabel>Education Details</ng-template>
+  <mat-step label="gaurantorDetails">
+    <div formGroupName="gaurantorDetails">
+      <ng-template matStepLabel>Gaurantor Details</ng-template>
+      <!-- <mat-form-field>
+        <input matInput type="number"  placeholder="gid" formControlName="gid">
+       </mat-form-field><br>
+       gid:number; -->
+       <mat-form-field>
+        <input matInput type="text"  placeholder="Gauranter Full Name" formControlName="gname">
+       </mat-form-field><br>
+   
+    <mat-form-field>
+      <input matInput type="date"  placeholder="Date of Birth as (dd/mm/yyyy)" formControlName="gdob">
+     </mat-form-field><br>
+	
+  <mat-form-field>
+    <input matInput type="text"  placeholder="Gender" formControlName="ggender">
+   </mat-form-field><br>
+	
+  <mat-form-field>
+    <input matInput type="email"  placeholder="email" formControlName="gemail">
+   </mat-form-field><br>
+	
+  <mat-form-field>
+    <input matInput type="number"  placeholder="Mobile number" formControlName="gmobile">
+   </mat-form-field><br>
+	
+  <mat-form-field>
+    <input matInput type="text"  placeholder="Occupation" formControlName="occupation">
+   </mat-form-field><br>
+	
+  <mat-form-field>
+    <input matInput type="text"  placeholder="Pan Number" formControlName="panno">
+   </mat-form-field><br>
+   
+    <mat-form-field>
+      <input matInput type="text"  placeholder="Relation With Student" formControlName="relationWithStudent">
+     </mat-form-field><br>
+     <!-- <div formGroupName="cibil">
+      <ng-template matStepLabel>cibil</ng-template>
+	
+     </div> -->
+
+     <div formGroupName="address">
+      <ng-template matStepLabel>Gaurantor Address</ng-template>
+      <!-- <mat-form-field >
+        <input  matInput type="number"  placeholder="id" formControlName="id" >
+       </mat-form-field><br> -->
+       <mat-form-field>
+        <input matInput type="text"  placeholder="District" formControlName="district">
+       </mat-form-field><br>
+       <mat-form-field>
+        <input matInput type="text"  placeholder="State" formControlName="state">
+       </mat-form-field><br>
+       <mat-form-field>
+        <input matInput type="text"  placeholder="City" formControlName="city">
+       </mat-form-field><br>
+       <mat-form-field>
+        <input matInput type="text"  placeholder="landmark" formControlName="landmark">
+       </mat-form-field><br>
+       <mat-form-field>
+        <input matInput type="number"  placeholder="blockno" formControlName="blockno">
+       </mat-form-field><br>
+     </div>
+
+     <div formGroupName="previousloandetils">
+      <ng-template matStepLabel>previousloandetils </ng-template>
+      <!-- <mat-form-field>
+        <input matInput type="number"  placeholder="pldid" formControlName="pldid">
+       </mat-form-field><br> -->
+
+<mat-form-field>
+  <input matInput type="number"  placeholder="Previous Loan Amount" formControlName="previousLoanAmount">
+ </mat-form-field><br>
+
+<mat-form-field>
+  <input matInput type="text"  placeholder="Previous Loan Tenure" formControlName="previousLoanTenure">
+ </mat-form-field><br>
+
+<mat-form-field>
+  <input matInput type="number"  placeholder="Previous Loan paid Amount" formControlName="previousLoanpaidAmount">
+ </mat-form-field><br>
+
+<mat-form-field>
+  <input matInput type="number"  placeholder="Previous Loan remaining Amount" formControlName="previousLoanremainingAmount">
+ </mat-form-field><br>
+
+<mat-form-field>
+  <input matInput type="text"  placeholder="Previous Loan Status" formControlName="previousLoanStatus">
+ </mat-form-field><br>
+
+<mat-form-field>
+  <input matInput type="text"  placeholder="previous Loan Remark" formControlName="previousLoanRemark">
+ </mat-form-field><br>
+ <div formGroupName="bankdetails">
+  <ng-template matStepLabel>Bank details </ng-template>
+
+<!--   
+<mat-form-field>
+  <input matInput type="number"  placeholder="bankid" formControlName="bankid">
+ </mat-form-field><br>
+  -->
+  
+<mat-form-field>
+  <input matInput type="number"  placeholder="Bank Acc No" formControlName="bankAccNo">
+ </mat-form-field><br>
+	
+  
+<mat-form-field>
+  <input matInput type="text"  placeholder="Account Holder Name" formControlName="accHolderName">
+ </mat-form-field><br>
+    
+
+    
+<mat-form-field>
+  <input matInput type="text"  placeholder="Bank name" formControlName="bankname">
+ </mat-form-field><br>
+   
+    
+<mat-form-field>
+  <input matInput type="text"  placeholder="Bank IFSC" formControlName="bankIFSC">
+ </mat-form-field><br>
+	
+  
+<mat-form-field>
+  <input matInput type="text"  placeholder="Branch Name" formControlName="branchName">
+ </mat-form-field><br>
+	
+ </div>
+
+
+     </div>
+
       <div>
         <button mat-raised-button color="primary" matStepperPrevious>Back</button>
         <button mat-raised-button color="accent" matStepperNext>Next</button>
@@ -69,11 +200,227 @@
     </div>
   </mat-step>
 
+  <mat-step label="educationDetails">
+    <div formGroupName="educationDetails">
+      <ng-template matStepLabel>Educational Details</ng-template>
+      <!-- <mat-form-field>
+        <input matInput type="number"  placeholder="eid" formControlName="eid">
+       </mat-form-field><br> -->
+     
+      <mat-form-field>
+        <input matInput type="text"  placeholder="Education type (Graduation, Post-graduation, etc)" formControlName="type">
+       </mat-form-field><br>
+      
+      <mat-form-field>
+        <input matInput type="text"  placeholder="Country" formControlName="country">
+       </mat-form-field><br>
+      
+      <mat-form-field>
+        <input matInput type="text"  placeholder="Duration" formControlName="duration">
+       </mat-form-field><br>
+      
+      <mat-form-field>
+        <input matInput type="number"  placeholder="Course Fees" formControlName="fees">
+       </mat-form-field><br>
+     
+      <mat-form-field>
+        <input matInput type="text"  placeholder="Institute name" formControlName="institutename">
+       </mat-form-field><br>
+      
+    
+      <div formGroupName="college">
+        <ng-template matStepLabel>College</ng-template>
+<!--         
+      <mat-form-field>
+        <input matInput type="number"  placeholder="collegeId" formControlName="collegeId">
+       </mat-form-field><br> -->
+     
+       
+        
+      <mat-form-field>
+        <input matInput type="text"  placeholder="CollegeName" formControlName="collegeName">
+       </mat-form-field><br>
+     
+        
+      <mat-form-field>
+        <input matInput type="email"  placeholder="College Email" formControlName="collegeEmail">
+       </mat-form-field><br>
+     
+        
+      <mat-form-field>
+        <input matInput type="number"  placeholder="College Mobiles" formControlName="collegeMobile">
+       </mat-form-field><br>
+     
+       
+  
+
+        <div formGroupName="collegeaddress">
+          <ng-template matStepLabel>College address</ng-template>
+    <!-- <mat-form-field >
+        <input  matInput type="number"  placeholder="id" formControlName="id" >
+       </mat-form-field><br> -->
+       <mat-form-field>
+        <input matInput type="text"  placeholder="District" formControlName="district">
+       </mat-form-field><br>
+       <mat-form-field>
+        <input matInput type="text"  placeholder="State" formControlName="state">
+       </mat-form-field><br>
+       <mat-form-field>
+        <input matInput type="text"  placeholder="City" formControlName="city">
+       </mat-form-field><br>
+       <mat-form-field>
+        <input matInput type="text"  placeholder="landmark" formControlName="landmark">
+       </mat-form-field><br>
+       <mat-form-field>
+        <input matInput type="number"  placeholder="blockno" formControlName="blockno">
+       </mat-form-field><br>
+    
+        </div>
+      </div>
+      <div>
+        <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+        <button mat-raised-button color="accent" matStepperNext>Next</button>
+      </div>
+
+    </div>
+  </mat-step>
+
+  <mat-step label="studentbankDetails">
+    <div formGroupName="studentbankDetails">
+      <ng-template matStepLabel>Student bank Details</ng-template>
+
+<!--   
+<mat-form-field>
+  <input matInput type="number"  placeholder="bankid" formControlName="bankid">
+ </mat-form-field><br>
+  -->
+  
+  <mat-form-field>
+    <input matInput type="number"  placeholder="Bank Acc No" formControlName="bankAccNo">
+   </mat-form-field><br>
+    
+    
+  <mat-form-field>
+    <input matInput type="text"  placeholder="Account Holder Name" formControlName="accHolderName">
+   </mat-form-field><br>
+      
+  
+      
+  <mat-form-field>
+    <input matInput type="text"  placeholder="Bank name" formControlName="bankname">
+   </mat-form-field><br>
+     
+      
+  <mat-form-field>
+    <input matInput type="text"  placeholder="Bank IFSC" formControlName="bankIFSC">
+   </mat-form-field><br>
+    
+    
+  <mat-form-field>
+    <input matInput type="text"  placeholder="Branch Name" formControlName="branchName">
+   </mat-form-field><br>
+   <div>
+    <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+    <button mat-raised-button color="accent" matStepperNext>Next</button>ng serve
+  </div>
+    </div>
+  </mat-step>
+
+  <mat-step label="educationPrevHistory">
+    <div formGroupName="educationPrevHistory">
+      <ng-template matStepLabel>Education Previous History</ng-template>
+      <!-- <mat-form-field>
+        <input matInput type="number"  placeholder="pcId" formControlName="pcId">
+       </mat-form-field><br> -->
+     
+      <mat-form-field>
+        <input matInput type="text"  placeholder="Previous course" formControlName="previouscourse">
+       </mat-form-field><br>
+     
+      <mat-form-field>
+        <input matInput type="number"  placeholder="Year" formControlName="year">
+       </mat-form-field><br>
+     
+      <mat-form-field>
+        <input matInput type="number"  placeholder="Percentage" formControlName="percentage">
+       </mat-form-field><br>
+      
+      <mat-form-field>
+        <input matInput type="text"  placeholder="institute" formControlName="institute">
+       </mat-form-field><br>
+       <div>
+        <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+        <button mat-raised-button color="accent" matStepperNext>Next</button>
+      </div>
+    </div>
+  </mat-step>
+
+  <mat-step label="documents">
+    
+      <ng-template matStepLabel>Documents Details</ng-template>
+      <mat-form-field>
+        Aadhar card:<input matInput type="file" (change)="onSelectfile1($event)" >
+        <br>
+    <br>
+    <img [src]="imageSrc1" height="150"><br><br>
+       </mat-form-field><br>
+       
+       <mat-form-field>
+        Pan card:<input matInput type="file" (change)="onSelectfile2($event)"  >
+        <br>
+    <br>
+    <img [src]="imageSrc2" height="150"><br><br>
+       </mat-form-field><br>
+       
+       <mat-form-field>
+        Caste Certificate:<input matInput type="file"  (change)="onSelectfile3($event)"  >
+        <br>
+        <br>
+        <img [src]="imageSrc3" height="150"><br><br>
+      </mat-form-field><br>
+       
+       <mat-form-field>
+        Income Certificate:<input matInput type="file" (change)="onSelectfile4($event)" >
+        <br>
+        <br>
+        <img [src]="imageSrc4" height="150"><br><br>
+       </mat-form-field><br>
+       
+       <mat-form-field>
+        Bank Statement:<input matInput type="file" (change)="onSelectfile5($event)"  >
+        <br>
+        <br>
+        <img [src]="imageSrc5" height="150"><br><br>
+       </mat-form-field><br>
+       
+       <mat-form-field>
+        Admission Certificate:<input matInput type="file" (change)="onSelectfile6($event)"  >
+        <br>
+        <br>
+        <img [src]="imageSrc6" height="150"><br><br>
+       </mat-form-field><br>
+       
+       <mat-form-field>
+        Fee Structure: <input matInput type="file" (change)="onSelectfile7($event)"  >
+        <br>
+        <br>
+        <img [src]="imageSrc7" height="150"><br><br>
+       </mat-form-field><br>
+       <div>
+        <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+        <button mat-raised-button color="accent" matStepperNext>Next</button>
+        <button mat-raised-button color="success"  type="submit"  (click)="saveInfo()" >Submit</button>
+      </div>
+
+      
+      </mat-step>
+
   <!-- <div>
     <button mat-raised-button color="primary" matStepperPrevious>Back</button>
     <button mat-raised-button color="accent" matStepperNext>Next</button>
+    <button mat-raised-button color="success"  type="submit"  (click)="saveInfo()" >Submit</button>
   </div> -->
-
+<!-- 
   <mat-step label="Profession">
     <div formGroupName="profession">
       <ng-template matStepLabel>Education Details</ng-template>
@@ -88,7 +435,7 @@
       </div>
     </div>
     </div>
-  </mat-step>
+  </mat-step> -->
 
 </form>
 </mat-vertical-stepper>
