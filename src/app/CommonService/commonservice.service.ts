@@ -22,5 +22,7 @@ export class CommonserviceService {
    viewAllEnquiry(){
     return this.http.get(this.url+"viewAllEnquiry")
    }
-
+   application(e:any):Observable<any>{
+    return this.http.post<any>(this.url, e,{responseType:'Text' as'json'});
+    }
 }

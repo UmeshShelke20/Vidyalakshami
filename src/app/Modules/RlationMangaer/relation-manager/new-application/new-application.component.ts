@@ -1,6 +1,8 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormGroupName, FormControl } from '@angular/forms';
-import { Address } from 'app/ApplicatioFormClassess/Address/address';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { CommonserviceService } from 'app/CommonService/commonservice.service';
+import { catchError, throwError } from 'rxjs';
 @Component({
   selector: 'app-new-application',
   templateUrl: './new-application.component.html',
@@ -10,7 +12,7 @@ export class NewApplicationComponent implements OnInit {
   title = 'StepperForm';
   application:any;
 
-  constructor() { }
+  constructor(private com:CommonserviceService) { }
   bankdetails=new FormGroup({
     bankid:new FormControl('',[Validators.required]),
     bankAccNo:new FormControl('',[Validators.required]),
@@ -103,12 +105,28 @@ this.application=new FormGroup({
     year:new FormControl('',[Validators.required]),
     percentage:new FormControl('',[Validators.required]),
     institute:new FormControl('',[Validators.required]),
-   })
-    // documents : new FormGroup({
-
-  // }),
+   }),
+    documents : new FormGroup({
+      
+  }),
 })
 }
+
+//documents = new FormGroup({
+  // aadhar:new FormControl('',[Validators.required]),
+
+  // pan:new FormControl('',[Validators.required]),
+  
+  // casteCert:new FormControl('',[Validators.required]),
+  
+  // incomeCert:new FormControl('',[Validators.required]),
+  
+  // bankStatement:new FormControl('',[Validators.required]),
+  
+  // admissionCert:new FormControl('',[Validators.required]),
+  
+  // feeStruct:new FormControl('',[Validators.required]),
+//});
 
 // address=new FormGroup({
 //   id:new FormControl('',[Validators.required]),
@@ -135,11 +153,108 @@ this.application=new FormGroup({
     bankdetails:this.bankdetails
 
   });
-  
-
-  saveInfo() {
-    console.log(this.application.value);
+  adharcard:any
+  reder= new FileReader();
+  imageSrc1:any
+  onSelectfile1(e:any){
+this.adharcard=e.target.files[0];
+const file=e.target.files[0];
+this.reder.onload=a=>this.imageSrc1=this.reder.result;
+this.reder.readAsDataURL(file);
   }
 
+  pan:any
+  imageSrc2:any
+
+   onSelectfile2(e:any){
+this.pan=e.target.files[0];
+const file=e.target.files[0];
+this.reder.onload=a=>this.imageSrc2=this.reder.result;
+this.reder.readAsDataURL(file);
+  }
+
+  casteCert:any
+  imageSrc3:any
+  onSelectfile3(e:any){
+    this.casteCert=e.target.files[0];
+    const file=e.target.files[0];
+    this.reder.onload=a=>this.imageSrc3=this.reder.result;
+    this.reder.readAsDataURL(file);
+      } 
+      incomeCert:any
+      imageSrc4:any
+      onSelectfile4(e:any){
+        this.incomeCert=e.target.files[0];
+        const file=e.target.files[0];
+        this.reder.onload=a=>this.imageSrc4=this.reder.result;
+        this.reder.readAsDataURL(file);
+          } 
+          bankStatement:any
+          imageSrc5:any
+      onSelectfile5(e:any){
+        this.bankStatement=e.target.files[0];
+        const file=e.target.files[0];
+        this.reder.onload=a=>this.imageSrc5=this.reder.result;
+        this.reder.readAsDataURL(file);
+          } 
+
+          admissionCert:any
+          imageSrc6:any
+      onSelectfile6(e:any){
+        this.admissionCert=e.target.files[0];
+        const file=e.target.files[0];
+        this.reder.onload=a=>this.imageSrc6=this.reder.result;
+        this.reder.readAsDataURL(file);
+          } 
+
+          feeStruct:any
+          imageSrc7:any
+          onSelectfile7(e:any){
+            this.feeStruct=e.target.files[0];
+            const file=e.target.files[0];
+            this.reder.onload=a=>this.imageSrc7=this.reder.result;
+            this.reder.readAsDataURL(file);
+              }
+  saveInfo() {
+    
+    
+     const document1=JSON.stringify(this.application.value);
+
+      const application=new FormData();
+      application.append("adharcard",this.adharcard);
+      application.append("pan",this.pan);
+      application.append("casteCert",this.casteCert);
+       application.append("incomeCert",this.incomeCert);
+       application.append("bankStatement",this.bankStatement);
+       application.append("admissionCert",this.admissionCert);
+       application.append("feeStruct",this.feeStruct);
+    
+     application.append("doc",document1);
+     //this.newclass.get('students')?.patchValue(this.dent)
+    //this.application.get('documents')?.patchValue(application)
+   // console.log(this.application.get('documents')['controls'])
+
+    this.com.application(application).pipe(catchError(this.handleError)).subscribe(response => {
+      console.log(response,"Send Mail mananger");
+      alert(response) ;
+      window.location.reload();
+    });
+    }
+    
+    private handleError(error: HttpErrorResponse) {
+    if (error.status === 0) {
+      // A client-side or network error occurred. Handle it accordingly.
+      alert('An error occurred:'+ error.error)
+      console.error('An error occurred:', error.error);
+    } else {
+      // The backend returned an unsuccessful response code.
+      // The response body may contain clues as to what went wrong.
+      alert(`Please fillup complete form ${error.status}, Fails to Submit: `+ error.error)
+      console.error(
+        `Please fillup complete form ${error.status}, Fails to Submit: `, error.error);
+    }
+    // Return an observable with a user-facing error message.
+    return throwError(() => new Error('Something bad happened; please try again later.'));
+    }
 
 }

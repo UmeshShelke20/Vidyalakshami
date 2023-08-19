@@ -355,10 +355,70 @@
     </div>
   </mat-step>
 
+  <mat-step label="documents">
+    <div formGroupName="documents">
+      <ng-template matStepLabel>Documents Details</ng-template>
+      <mat-form-field>
+        Aadhar card:<input matInput type="file" (change)="onSelectfile1($event)" >
+        <br>
+    <br>
+    <img [src]="imageSrc1" height="150"><br><br>
+       </mat-form-field><br>
+       
+       <mat-form-field>
+        Pan card:<input matInput type="file" (change)="onSelectfile2($event)"  >
+        <br>
+    <br>
+    <img [src]="imageSrc2" height="150"><br><br>
+       </mat-form-field><br>
+       
+       <mat-form-field>
+        Caste Certificate:<input matInput type="file"  (change)="onSelectfile3($event)"  >
+        <br>
+        <br>
+        <img [src]="imageSrc3" height="150"><br><br>
+      </mat-form-field><br>
+       
+       <mat-form-field>
+        Income Certificate:<input matInput type="file" (change)="onSelectfile4($event)" >
+        <br>
+        <br>
+        <img [src]="imageSrc4" height="150"><br><br>
+       </mat-form-field><br>
+       
+       <mat-form-field>
+        Bank Statement:<input matInput type="file" (change)="onSelectfile5($event)"  >
+        <br>
+        <br>
+        <img [src]="imageSrc5" height="150"><br><br>
+       </mat-form-field><br>
+       
+       <mat-form-field>
+        Admission Certificate:<input matInput type="file" (change)="onSelectfile6($event)"  >
+        <br>
+        <br>
+        <img [src]="imageSrc6" height="150"><br><br>
+       </mat-form-field><br>
+       
+       <mat-form-field>
+        Fee Structure: <input matInput type="file" (change)="onSelectfile7($event)"  >
+        <br>
+        <br>
+        <img [src]="imageSrc7" height="150"><br><br>
+       </mat-form-field><br>
+       <div>
+        <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+        <button mat-raised-button color="accent" matStepperNext>Next</button>
+        <button mat-raised-button color="success"  type="submit"  (click)="saveInfo()" >Submit</button>
+      </div>
+
+      </div>
+      </mat-step>
+
   <!-- <div>
     <button mat-raised-button color="primary" matStepperPrevious>Back</button>
     <button mat-raised-button color="accent" matStepperNext>Next</button>
-    <button mat-raised-button color="accent"  type="submit"  (click)="saveInfo()" >Submit</button>
+    <button mat-raised-button color="success"  type="submit"  (click)="saveInfo()" >Submit</button>
   </div> -->
 <!-- 
   <mat-step label="Profession">
