@@ -9,7 +9,7 @@ import { catchError, throwError } from 'rxjs';
   styleUrls: ['./new-application.component.scss']
 })
 export class NewApplicationComponent implements OnInit {
-  title = 'StepperForm';
+ 
   application:any;
 
   constructor(private com:CommonserviceService) { }
@@ -150,11 +150,11 @@ this.application=new FormGroup({
     bankdetails:this.bankdetails
 
   });
-  adharcard:any
+  aadhar:any
   reder= new FileReader();
   imageSrc1:any
   onSelectfile1(e:any){
-this.adharcard=e.target.files[0];
+this.aadhar=e.target.files[0];
 const file=e.target.files[0];
 this.reder.onload=a=>this.imageSrc1=this.reder.result;
 this.reder.readAsDataURL(file);
@@ -215,24 +215,27 @@ this.reder.readAsDataURL(file);
   saveInfo() {
     
     console.log(this.application.value);
+
+    console.log(this.feeStruct);
      const document1=JSON.stringify(this.application.value);
 
-      const application=new FormData();
-      application.append("adharcard",this.adharcard);
-      application.append("pan",this.pan);
-      application.append("casteCert",this.casteCert);
-       application.append("incomeCert",this.incomeCert);
-       application.append("bankStatement",this.bankStatement);
-       application.append("admissionCert",this.admissionCert);
-       application.append("feeStruct",this.feeStruct);
-    
-     application.append("doc",document1);
+      const application1 = new FormData();
+      application1.append('aadhar',this.aadhar);
+      application1.append('pan',this.pan);
+      application1.append('casteCert',this.casteCert);
+       application1.append('incomeCert',this.incomeCert);
+       application1.append('bankStatement',this.bankStatement);
+       application1.append('admissionCert',this.admissionCert);
+       application1.append('feeStruct',this.feeStruct);
+       application1.append("doc",document1);
+     // this.com.application(application1).subscribe({});
 
-    this.com.application(application).pipe(catchError(this.handleError)).subscribe(response => {
-      console.log(response,"Send Mail mananger");
-      alert(response) ;
-      window.location.reload();
-    });
+      // console.log(application1);
+      this.com.application(application1).pipe(catchError(this.handleError)).subscribe(response => {
+        console.log(response,"Send Mail mananger");
+        alert(response) ;
+        window.location.reload();
+      });
     }
     
     private handleError(error: HttpErrorResponse) {
