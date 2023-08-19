@@ -279,10 +279,79 @@
       </div>
       <div>
         <button mat-raised-button color="primary" matStepperPrevious>Back</button>
-        <button mat-raised-button color="accent"  type="submit"  (click)="saveInfo()" >Submit</button>
         <button mat-raised-button color="accent" matStepperNext>Next</button>
       </div>
 
+    </div>
+  </mat-step>
+
+  <mat-step label="studentbankDetails">
+    <div formGroupName="studentbankDetails">
+      <ng-template matStepLabel>Student bank Details</ng-template>
+
+<!--   
+<mat-form-field>
+  <input matInput type="number"  placeholder="bankid" formControlName="bankid">
+ </mat-form-field><br>
+  -->
+  
+  <mat-form-field>
+    <input matInput type="number"  placeholder="Bank Acc No" formControlName="bankAccNo">
+   </mat-form-field><br>
+    
+    
+  <mat-form-field>
+    <input matInput type="text"  placeholder="Account Holder Name" formControlName="accHolderName">
+   </mat-form-field><br>
+      
+  
+      
+  <mat-form-field>
+    <input matInput type="text"  placeholder="Bank name" formControlName="bankname">
+   </mat-form-field><br>
+     
+      
+  <mat-form-field>
+    <input matInput type="text"  placeholder="Bank IFSC" formControlName="bankIFSC">
+   </mat-form-field><br>
+    
+    
+  <mat-form-field>
+    <input matInput type="text"  placeholder="Branch Name" formControlName="branchName">
+   </mat-form-field><br>
+   <div>
+    <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+    <button mat-raised-button color="accent" matStepperNext>Next</button>
+  </div>
+    </div>
+  </mat-step>
+
+  <mat-step label="educationPrevHistory">
+    <div formGroupName="educationPrevHistory">
+      <ng-template matStepLabel>Education Previous History</ng-template>
+      <!-- <mat-form-field>
+        <input matInput type="number"  placeholder="pcId" formControlName="pcId">
+       </mat-form-field><br> -->
+     
+      <mat-form-field>
+        <input matInput type="text"  placeholder="Previous course" formControlName="previouscourse">
+       </mat-form-field><br>
+     
+      <mat-form-field>
+        <input matInput type="number"  placeholder="Year" formControlName="year">
+       </mat-form-field><br>
+     
+      <mat-form-field>
+        <input matInput type="number"  placeholder="Percentage" formControlName="percentage">
+       </mat-form-field><br>
+      
+      <mat-form-field>
+        <input matInput type="text"  placeholder="institute" formControlName="institute">
+       </mat-form-field><br>
+       <div>
+        <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+        <button mat-raised-button color="accent" matStepperNext>Next</button>
+      </div>
     </div>
   </mat-step>
 

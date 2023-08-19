@@ -89,16 +89,24 @@ this.application=new FormGroup({
 
    })
    ,
-  // studentbankDetails: new FormGroup({
+   studentbankDetails: new FormGroup({
+    bankid:new FormControl('',[Validators.required]),
+    bankAccNo:new FormControl('',[Validators.required]),
+      accHolderName:new FormControl('',[Validators.required]),
+      bankname:new FormControl('',[Validators.required]),
+    bankIFSC:new FormControl('',[Validators.required]),
+    branchName:new FormControl('',[Validators.required]),
+   }),
+   educationPrevHistory: new FormGroup({
+    pcId:new FormControl('',[Validators.required]),
+    previouscourse:new FormControl('',[Validators.required]),
+    year:new FormControl('',[Validators.required]),
+    percentage:new FormControl('',[Validators.required]),
+    institute:new FormControl('',[Validators.required]),
+   })
+    // documents : new FormGroup({
 
   // }),
-
-  // documents : new FormGroup({
-
-  // }),
-  // educationPrevHistory: new FormGroup({
-
-  // })
 })
 }
 
