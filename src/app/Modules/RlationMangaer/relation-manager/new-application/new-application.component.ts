@@ -217,7 +217,7 @@ this.reder.readAsDataURL(file);
               }
   saveInfo() {
     
-    
+    console.log(this.application.value);
      const document1=JSON.stringify(this.application.value);
 
       const application=new FormData();
@@ -230,9 +230,6 @@ this.reder.readAsDataURL(file);
        application.append("feeStruct",this.feeStruct);
     
      application.append("doc",document1);
-     //this.newclass.get('students')?.patchValue(this.dent)
-    //this.application.get('documents')?.patchValue(application)
-   // console.log(this.application.get('documents')['controls'])
 
     this.com.application(application).pipe(catchError(this.handleError)).subscribe(response => {
       console.log(response,"Send Mail mananger");
