@@ -105,10 +105,7 @@ this.application=new FormGroup({
     year:new FormControl('',[Validators.required]),
     percentage:new FormControl('',[Validators.required]),
     institute:new FormControl('',[Validators.required]),
-   }),
-    documents : new FormGroup({
-      
-  }),
+   })
 })
 }
 
