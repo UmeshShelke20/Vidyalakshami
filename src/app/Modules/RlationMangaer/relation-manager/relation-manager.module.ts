@@ -14,11 +14,13 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatCardModule} from '@angular/material/card';
+import { ViewformComponent } from './viewForm/viewform/viewform.component';
 const routes:Routes=[
   {path:'relationManager',component:RealationManagerComponent},
   {path:'viewEnquiry',component:ViewEnquiryComponent},
   {path:'newApplication',component:NewApplicationComponent},
-  {path:'viewApplication',component:ViewApplicationComponent}
+  {path:'viewApplication',component:ViewApplicationComponent},
+  {path:'viewform/:id',component:ViewformComponent}
 ]
 
 @NgModule({
@@ -27,6 +29,7 @@ const routes:Routes=[
     ViewEnquiryComponent,
     NewApplicationComponent,
     ViewApplicationComponent,
+    ViewformComponent,
   ],
   imports: [
     CommonModule,RouterModule.forChild(routes),FormsModule,ReactiveFormsModule,

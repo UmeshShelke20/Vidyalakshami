@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'; 
+import { CommonserviceService } from 'app/CommonService/commonservice.service';
 
 @Component({
   selector: 'app-view-application',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-application.component.scss']
 })
 export class ViewApplicationComponent implements OnInit {
-
-  constructor() { }
+applications:any
+  constructor(private com :CommonserviceService,private router:Router) { }
 
   ngOnInit(): void {
+    this.com.getAllApplication().subscribe((data:any)=>{
+      this.applications=data
+    })
   }
+viewCompleteForm(n:number){
+this.router.navigateByUrl("role/rema/viewform/"+n)
+}
 
 }

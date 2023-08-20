@@ -25,4 +25,12 @@ export class CommonserviceService {
    application(e:any):Observable<any>{
     return this.http.post<any>(this.url+"saveApplicationDetails", e,{responseType:'text' as 'json'})
     }
+
+    getAllApplication(){
+      return this.http.get(this.url+"getAllApplication")
+    }
+
+    viewform(){
+      return this.http.get(this.url+"viewform")
+    }
 }
