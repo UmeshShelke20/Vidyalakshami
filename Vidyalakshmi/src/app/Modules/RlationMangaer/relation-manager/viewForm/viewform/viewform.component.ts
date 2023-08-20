@@ -18,11 +18,9 @@ export class ViewformComponent implements OnInit {
    }
 
   ngOnInit(): void {
-//     this.com.getAllApplication().subscribe((data:any)=>{
-//       this.applications=data
-//     })
-// console.log(this.appId)
-
+this.com.viewform(this.appId).subscribe((data:any)=>{
+this.applications=data
+})
   }
 
 }
