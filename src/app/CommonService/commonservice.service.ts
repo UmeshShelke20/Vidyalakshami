@@ -30,7 +30,7 @@ export class CommonserviceService {
       return this.http.get(this.url+"getAllApplication")
     }
 
-    viewform(){
-      return this.http.get(this.url+"viewform")
+    viewform(n:number){
+      return this.http.get(this.url+"viewform/"+n)
     }
 }

@@ -53,6 +53,9 @@
          <mat-form-field>
           <input matInput type="number"  placeholder="blockno" formControlName="blockno">
          </mat-form-field><br>
+         <mat-form-field>
+          <input matInput type="number"  placeholder="Pin Code" formControlName="citypin">
+         </mat-form-field><br>
        </div>
       <div class="example-button-row">
         <button  mat-raised-button color="accent" matStepperNext>Next</button>
@@ -122,6 +125,9 @@
        </mat-form-field><br>
        <mat-form-field>
         <input matInput type="number"  placeholder="blockno" formControlName="blockno">
+       </mat-form-field><br>
+       <mat-form-field>
+        <input matInput type="number"  placeholder="Pin Code" formControlName="citypin">
        </mat-form-field><br>
      </div>
 
@@ -274,7 +280,9 @@
        <mat-form-field>
         <input matInput type="number"  placeholder="blockno" formControlName="blockno">
        </mat-form-field><br>
-    
+       <mat-form-field>
+        <input matInput type="number"  placeholder="Pin Code" formControlName="citypin">
+       </mat-form-field><br>
         </div>
       </div>
       <div>
@@ -414,29 +422,6 @@
 
       
       </mat-step>
-
-  <!-- <div>
-    <button mat-raised-button color="primary" matStepperPrevious>Back</button>
-    <button mat-raised-button color="accent" matStepperNext>Next</button>
-    <button mat-raised-button color="success"  type="submit"  (click)="saveInfo()" >Submit</button>
-  </div> -->
-<!-- 
-  <mat-step label="Profession">
-    <div formGroupName="profession">
-      <ng-template matStepLabel>Education Details</ng-template>
-
-    <div>      
-      <ng-template matStepLabel>Done</ng-template>
-      You are now done.
-      <div>
-        <button mat-raised-button  color="primary" matStepperPrevious>Back</button>
-        <button mat-raised-button color="accent"  type="submit"  (click)="saveInfo()" >Submit</button>
-        <button mat-raised-button color="primary" (click)="stepper.reset()">Reset</button>
-      </div>
-    </div>
-    </div>
-  </mat-step> -->
-
 </form>
 </mat-vertical-stepper>
 </mat-card-content>

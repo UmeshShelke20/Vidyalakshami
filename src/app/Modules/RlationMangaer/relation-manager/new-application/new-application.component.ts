@@ -16,8 +16,8 @@ export class NewApplicationComponent implements OnInit {
   bankdetails=new FormGroup({
     bankid:new FormControl('',[Validators.required]),
     bankAccNo:new FormControl('',[Validators.required]),
-      accHolderName:new FormControl('',[Validators.required]),
-      bankname:new FormControl('',[Validators.required]),
+    accHolderName:new FormControl('',[Validators.required]),
+    bankname:new FormControl('',[Validators.required]),
     bankIFSC:new FormControl('',[Validators.required]),
     branchName:new FormControl('',[Validators.required]),
 
@@ -35,6 +35,7 @@ export class NewApplicationComponent implements OnInit {
       city:new FormControl('',[Validators.required]),
       landmark:new FormControl('',[Validators.required]),
       blockno:new FormControl('',[Validators.required]),
+      citypin:new FormControl('',[Validators.required]),
       })
   })
 
@@ -56,6 +57,7 @@ this.application=new FormGroup({
       city:new FormControl('',[Validators.required]),
       landmark:new FormControl('',[Validators.required]),
       blockno:new FormControl('',[Validators.required]),
+      citypin:new FormControl('',[Validators.required])
       })
   })
   ,
@@ -76,6 +78,7 @@ this.application=new FormGroup({
     city:new FormControl('',[Validators.required]),
     landmark:new FormControl('',[Validators.required]),
     blockno:new FormControl('',[Validators.required]),
+    citypin:new FormControl('',[Validators.required]),
     }),
 	previousloandetils:this.PreviousLoanDetails
 
@@ -87,7 +90,7 @@ this.application=new FormGroup({
     duration:new FormControl('',[Validators.required]),
     fees :new FormControl('',[Validators.required]),
     institutename:new FormControl('',[Validators.required]),
-     college:this.College
+    college:this.College
 
    })
    ,
