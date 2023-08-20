@@ -5,8 +5,15 @@ export class Menu {
                 {path: "relationManager", title: "Relation Manager", icon: "pe-7s-graph", class: "" },
                 {path: "viewEnquiry", title: "View Enquiry", icon: "pe-7s-graph", class: "" },
                 {path: "newApplication", title: "New Application", icon: "pe-7s-graph", class: "" },
-                {path: "viewApplication", title: "View Application", icon: "pe-7s-graph", class: "" },
-                
+                {path: "viewApplication", title: "View Application", icon: "pe-7s-graph", class: "" },    
+            ],
+
+            crema:[
+                {path: "creditManager", title: "Credit Manager", icon: "pe-7s-graph", class: "" },
+                {path: "checkapp", title: "Check application", icon: "pe-7s-graph", class: "" },
+                {path: "ckeckcbil", title: "ckeck cbil", icon: "pe-7s-graph", class: "" },
+                {path: "viewAllApp", title: "view All App", icon: "pe-7s-graph", class: "" },
+               
             ],
             admin:[
                 {path: "admindash", title: "Addmin", icon: "pe-7s-graph", class: "" },

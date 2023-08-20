@@ -30,6 +30,12 @@ export class LoginComponent implements OnInit {
       sessionStorage.setItem('role', 'rema');
       this.router.navigateByUrl("role/rema/relationManager");
     }
+    if (u.username === 'crema' && u.password === 'crema') {
+      console.log('in crema');
+      sessionStorage.setItem('role', 'crema');
+      this.router.navigateByUrl("role/crema/creditManager");
+    }
+
     if (u.username === 'admin' && u.password === 'admin') {
       console.log('in admin');
       sessionStorage.setItem('role', 'admin');
