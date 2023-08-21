@@ -41,4 +41,15 @@ export class CommonserviceService {
     getpanno(n:number){
     return this.http.get(this.url+"pan/"+n)
     }
+    vewNewEnquiry(){
+      return this.http.get(this.url+"vewNewEnquiry")
+    }
+accepEnquiry(n:number){
+return this.http.put( this.url+"accepEnquiry/",n ,{responseType:'text'as 'json'});
+
+}
+rejectEnquiry(n:number){
+  return this.http.put(this.url+"rejectEnquiry/",n ,{responseType:'text'as 'json'} )
+}
+
 }

@@ -28,6 +28,7 @@ enquiry:any
       enquiryStatus:new FormControl('',[Validators.required]),
       educationtype:new FormControl('',[Validators.required]),
       city:new FormControl('',[Validators.required]),
+      pancard:new FormControl('',[Validators.required]),
 
     })
   }

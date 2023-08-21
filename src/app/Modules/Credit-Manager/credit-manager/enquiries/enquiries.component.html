@@ -48,6 +48,8 @@
                                     </th>
                                     <th>educationtype</th>
                                     <th>city</th>
+                                    <th>pancard</th>
+                                    <th>CIBIL ckeck</th>
 
                                 </thead>
                                 <tbody>
@@ -65,8 +67,11 @@
                                 <td>{{s.enquiryStatus}}</td>
                                 <td>{{s.educationtype}}</td>
                                 <td>{{s.city}}</td>
-                               
-                                    </tr> 
+                                <td>{{s.pancard}}
+                                <td><button mat-raised-button color="primary" (click)="checkCIBIL(s.pancard)">Check CIBIL</button></td>
+                                <td><button mat-raised-button color="primary" (click)="acceptEn(s.enquiryid)">Accept</button></td>
+                                <td><button mat-raised-button color="primary" (click)="rejectEn(s.enquiryid)">Reject</button></td>
+                                </tr> 
                                 </tbody>
                             </table>
                         </div>
