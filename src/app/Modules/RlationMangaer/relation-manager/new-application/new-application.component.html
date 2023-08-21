@@ -16,22 +16,28 @@
        <input matInput type="number"  placeholder="eid" formControlName="eid">
       </mat-form-field><br> -->
       <mat-form-field>
-        <input matInput type="text"  placeholder="Full Name" formControlName="ename">
+        <input matInput type="text"  placeholder="Full Name" formControlName="ename" [ngModel]="enquiry.name">
        </mat-form-field><br>
        <mat-form-field>
-        <input matInput type="date"  placeholder="Date of birth (dd/mm/yyyy) " formControlName="edob">
+        <input matInput type="date"  placeholder="Date of birth (dd/mm/yyyy) " formControlName="edob" [ngModel]="enquiry.dob">
        </mat-form-field><br>
        <mat-form-field>
-        <input matInput type="text"  placeholder="Gender" formControlName="egender">
+        <input matInput type="text"  placeholder="Gender" formControlName="egender" [ngModel]="enquiry.gender">
        </mat-form-field><br>
        <mat-form-field>
-        <input matInput type="text"  placeholder="Category" formControlName="ecategory">
+        <input matInput type="text"  placeholder="Category" formControlName="ecategory" [ngModel]="enquiry.category">
        </mat-form-field><br>
        <mat-form-field>
-        <input matInput type="email"  placeholder="Email" formControlName="eemail">
+        <input matInput type="email"  placeholder="Email" formControlName="eemail" [ngModel]="enquiry.email">
        </mat-form-field><br>
        <mat-form-field>
-        <input matInput type="number"  placeholder="Mobile number" formControlName="emobile">
+        <input matInput type="number"  placeholder="Mobile number" formControlName="emobile" [ngModel]="enquiry.mobile">
+       </mat-form-field><br>
+       <mat-form-field>
+        <input matInput type="number"  placeholder="Annual family income" formControlName="annualfamilyincome" [ngModel]="enquiry.annualfamilyincome">
+       </mat-form-field><br>
+       <mat-form-field>
+        <input matInput type="number"  placeholder="Loan range Amount" formControlName="loanrangeAmount" [ngModel]="enquiry.loanrangeAmount">
        </mat-form-field><br>
        <div formGroupName="address">
         <ng-template matStepLabel>Applicant Address</ng-template>
@@ -45,7 +51,7 @@
           <input matInput type="text"  placeholder="State" formControlName="state">
          </mat-form-field><br>
          <mat-form-field>
-          <input matInput type="text"  placeholder="City" formControlName="city">
+          <input matInput type="text"  placeholder="City" formControlName="city" [ngModel]="enquiry.city">
          </mat-form-field><br>
          <mat-form-field>
           <input matInput type="text"  placeholder="landmark" formControlName="landmark">
@@ -95,7 +101,7 @@
    </mat-form-field><br>
 	
   <mat-form-field>
-    <input matInput type="text"  placeholder="Pan Number" formControlName="panno">
+    <input matInput type="text"  placeholder="Pan Number" formControlName="panno" [ngModel]="enquiry.pancard">
    </mat-form-field><br>
    
     <mat-form-field>
@@ -214,7 +220,7 @@
        </mat-form-field><br> -->
      
       <mat-form-field>
-        <input matInput type="text"  placeholder="Education type (Graduation, Post-graduation, etc)" formControlName="type">
+        <input matInput type="text"  placeholder="Education type (Graduation, Post-graduation, etc)" formControlName="type" [ngModel]="enquiry.educationtype">
        </mat-form-field><br>
       
       <mat-form-field>

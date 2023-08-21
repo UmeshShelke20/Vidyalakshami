@@ -9,5 +9,7 @@ export class EnquiryPersonalDetails {
 	ecategory:string;
 	eemail:string;
 	emobile:number;
+	annualfamilyincome:number;
+    loanrangeAmount:number;
 	address:Address
 }

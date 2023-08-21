@@ -69,6 +69,7 @@ console.log(this.id,"New application id")
   })
 
   ngOnInit(): void {
+   this.getEnquiry(),
 this.application=new FormGroup({
   applicationId:new FormControl('',[Validators.required]),
   enquiryPersonalDetails:new FormGroup({
@@ -79,6 +80,8 @@ this.application=new FormGroup({
     ecategory:new FormControl('',[Validators.required]),
     eemail:new FormControl('',[Validators.required]),
     emobile:new FormControl('',[Validators.required]),
+    annualfamilyincome:new FormControl('',[Validators.required]),
+    loanrangeAmount:new FormControl('',[Validators.required]),
     address:new FormGroup({
       id:new FormControl('',[Validators.required]),
       district:new FormControl('',[Validators.required]),
