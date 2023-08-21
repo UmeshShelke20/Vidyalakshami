@@ -12,6 +12,7 @@ import { LoanenquiryModule } from './Enquiry/loanenquiry/loanenquiry.module';
 import { LoginModule } from './login/login/login.module';
 import { RelationManagerModule } from './Modules/RlationMangaer/relation-manager/relation-manager.module';
 import { CreditManagerModule } from './Modules/Credit-Manager/credit-manager/credit-manager.module';
+import { OperationalManagerModule } from './Modules/Operational Manager/operational-manager/operational-manager.module';
 
 
 const routes: Routes =[
@@ -27,6 +28,7 @@ const routes: Routes =[
      {path:'stu',loadChildren:()=>StudentModule},
      {path:'rema',loadChildren:()=>RelationManagerModule},
      {path:'crema',loadChildren:()=>CreditManagerModule},
+     {path:'opma',loadChildren:()=>OperationalManagerModule},
   ]}
 
 ];

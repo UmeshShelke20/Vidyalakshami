@@ -43,7 +43,7 @@ export class TopbarComponent implements OnInit {
             return this.listTitles[item].title;
         }
     }
-    return 'Dashbord';
+    return 'Well-Come';
   }
   sidebarToggle() {
       if (this.sidebarVisible === false) {

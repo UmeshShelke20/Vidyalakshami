@@ -422,11 +422,8 @@
        </mat-form-field><br>
        <div>
         <button mat-raised-button color="primary" matStepperPrevious>Back</button>
-        <button mat-raised-button color="accent" matStepperNext>Next</button>
-        <button [disabled]="!application.valid" mat-raised-button color="success"  type="submit"  (click)="saveInfo()" >Submit</button>
+        <button mat-raised-button color="accent"  type="submit"  (click)="saveInfo()" >Submit</button>
       </div>
-
-      
       </mat-step>
 </form>
 </mat-vertical-stepper>

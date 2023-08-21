@@ -25,6 +25,12 @@ export class LoginComponent implements OnInit {
   login(u) {
     console.log("login called");
     console.log(u.username,u.password);
+    
+    if (u.username === 'opma' && u.password === 'opma') {
+      console.log('in opma');
+      sessionStorage.setItem('role', 'opma');
+      this.router.navigateByUrl("role/opma/operational");
+    }
     if (u.username === 'rema' && u.password === 'rema') {
       console.log('in rema');
       sessionStorage.setItem('role', 'rema');
