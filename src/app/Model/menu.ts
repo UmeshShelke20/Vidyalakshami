@@ -3,8 +3,8 @@ export class Menu {
         {
             rema:[
                 {path: "relationManager", title: "Relation Manager", icon: "pe-7s-graph", class: "" },
-                {path: "viewEnquiry", title: "View Enquiry", icon: "pe-7s-graph", class: "" },
-                {path: "newApplication", title: "New Application", icon: "pe-7s-graph", class: "" },
+                {path: "viewEnquiry", title: "View All Enquiry", icon: "pe-7s-graph", class: "" },
+                {path: "ViewAcceptedEnquiry", title: "View Accepted Enquiry", icon: "pe-7s-graph", class: "" },
                 {path: "viewApplication", title: "View Application", icon: "pe-7s-graph", class: "" },    
             ],
             

@@ -48,9 +48,9 @@
                                     <th>
                                        View Complete Form
                                     </th>
-                                    <th>
+                                    <!-- <th>
                                         Check CIBIL
-                                     </th>
+                                     </th> -->
                                 </thead>
                                 <tbody>
                                     <tr *ngFor="let s of applications">
@@ -65,7 +65,7 @@
                                 <td>{{s.enquiryPersonalDetails.address.state}}</td>
                                 <td>{{s.enquiryPersonalDetails.address.city}}</td>
                                 <td><button mat-raised-button color="primary" (click)="viewCompleteForm(s.applicationId)">View Complete Form</button></td>
-                                <td><button mat-raised-button color="primary" (click)="checkCIBIL(s.gaurantorDetails.panno)">Check CIBIL</button></td>
+                                <!-- <td><button mat-raised-button color="primary" (click)="checkCIBIL(s.gaurantorDetails.panno)">Check CIBIL</button></td> -->
                                     </tr> 
                                 </tbody>
                             </table>

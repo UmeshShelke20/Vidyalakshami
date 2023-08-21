@@ -44,12 +44,18 @@ export class CommonserviceService {
     vewNewEnquiry(){
       return this.http.get(this.url+"vewNewEnquiry")
     }
-accepEnquiry(n:number){
+accepEnquiry(n:Enquiry){
 return this.http.put( this.url+"accepEnquiry/",n ,{responseType:'text'as 'json'});
-
 }
-rejectEnquiry(n:number){
+
+rejectEnquiry(n:Enquiry){
   return this.http.put(this.url+"rejectEnquiry/",n ,{responseType:'text'as 'json'} )
+}
+vewAcceptedEnquiry(){
+  return this.http.get(this.url+"vewAcceptedEnquiry")
+}
+getEnquiryByid(n:number){
+  return this.http.get(this.url+"getEnquiryByid/"+n)
 }
 
 }

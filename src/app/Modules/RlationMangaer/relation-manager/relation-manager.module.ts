@@ -15,10 +15,12 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatCardModule} from '@angular/material/card';
 import { ViewformComponent } from './viewForm/viewform/viewform.component';
+import { ViewAcceptedEnquiryComponent } from './view-accepted-enquiry/view-accepted-enquiry.component';
 const routes:Routes=[
   {path:'relationManager',component:RealationManagerComponent},
+  {path:'ViewAcceptedEnquiry',component:ViewAcceptedEnquiryComponent},
   {path:'viewEnquiry',component:ViewEnquiryComponent},
-  {path:'newApplication',component:NewApplicationComponent},
+  {path:'newApplication/:id',component:NewApplicationComponent},
   {path:'viewApplication',component:ViewApplicationComponent},
   {path:'viewform/:id',component:ViewformComponent}
 ]
@@ -30,6 +32,7 @@ const routes:Routes=[
     NewApplicationComponent,
     ViewApplicationComponent,
     ViewformComponent,
+    ViewAcceptedEnquiryComponent,
   ],
   imports: [
     CommonModule,RouterModule.forChild(routes),FormsModule,ReactiveFormsModule,

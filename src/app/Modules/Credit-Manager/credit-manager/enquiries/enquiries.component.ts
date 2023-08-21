@@ -13,23 +13,41 @@ import { catchError, throwError } from 'rxjs';
 export class EnquiriesComponent implements OnInit {
   constructor( private com:CommonserviceService,public router:Router) { }
   allEnquiry:any;
- 
-    ngOnInit(): void {
+ en:Enquiry={
+   enquiryid: 0,
+   name: '',
+   dob: '',
+   gender: '',
+   category: '',
+   email: '',
+   mobile: 0,
+   aadhar: 0,
+   annualfamilyincome: 0,
+   loanrangeAmount: 0,
+   enquiryStatus: '',
+   educationtype: '',
+   city: '',
+   pancard: ''
+ }
+ngOnInit(): void {
   this.com.vewNewEnquiry().pipe(catchError(this.handleError)).subscribe(response => {
   this.allEnquiry=response;
   });
     }
-    checkCIBIL(n:string){
+checkCIBIL(n:string){
       this.router.navigateByUrl("role/crema/ckeckcbil/"+n)
     }
     acceptEn(n:number){
-this.com.accepEnquiry(n).pipe(catchError(this.handleError)).subscribe(response => {
+      this.en.enquiryid=n
+this.com.accepEnquiry(this.en).pipe(catchError(this.handleError)).subscribe(response => {
   alert( response);
+  window.location.reload();
   });
   }
 rejectEn(n:number){
- this.com.rejectEnquiry(n).pipe(catchError(this.handleError)).subscribe(response => {
+ this.com.rejectEnquiry(this.en).pipe(catchError(this.handleError)).subscribe(response => {
   alert( response);
+  window.location.reload();
   });
 }
   private handleError(error: HttpErrorResponse) {
