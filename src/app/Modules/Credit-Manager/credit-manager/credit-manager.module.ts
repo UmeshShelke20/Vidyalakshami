@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { EnquiriesComponent } from './enquiries/enquiries.component';
 import { CommonModule } from '@angular/common';
 import { CheckApplicationComponent } from './check-application/check-application.component';
 import { CheckCBILComponent } from './check-cbil/check-cbil.component';
@@ -20,7 +21,8 @@ const routes:Routes=[
   {path:'checkapp',component:CheckApplicationComponent},
   {path:'ckeckcbil/:id',component:CheckCBILComponent},
   {path:'viewAllApp',component:ViewAllApplicationComponent},
-  {path:'viewsingle/:id',component:ViewsingleApplicationComponent}
+  {path:'viewsingle/:id',component:ViewsingleApplicationComponent},
+ {path:'viewEnquiry',component: EnquiriesComponent}
 ]
 
 @NgModule({
@@ -29,7 +31,8 @@ const routes:Routes=[
     CheckCBILComponent,
     ViewAllApplicationComponent,
     ViewsingleApplicationComponent,
-    CreditManagerComponent
+    CreditManagerComponent,
+    EnquiriesComponent,
   ],
   imports: [
     CommonModule,RouterModule.forChild(routes),FormsModule,ReactiveFormsModule,

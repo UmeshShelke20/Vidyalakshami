@@ -35,9 +35,9 @@ export class CommonserviceService {
       return this.http.get(this.url+"viewform/"+n)
     }
     getCIBIL(cibil:CIBIL){
-    return this.http.post(this.url+"checkCibil/",cibil)
+    return this.http.post(this.url+"checkCibil/",cibil,{responseType:'text'as 'json'})
     }
-
+    
     getpanno(n:number){
     return this.http.get(this.url+"pan/"+n)
     }
