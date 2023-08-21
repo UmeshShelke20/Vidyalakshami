@@ -1,7 +1,9 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { CommonserviceService } from 'app/CommonService/commonservice.service';
+import { Enquiry } from 'app/Model/enquiry';
 import { catchError, throwError } from 'rxjs';
 @Component({
   selector: 'app-new-application',
@@ -9,10 +11,37 @@ import { catchError, throwError } from 'rxjs';
   styleUrls: ['./new-application.component.scss']
 })
 export class NewApplicationComponent implements OnInit {
- 
-  application:any;
+ enquiry:Enquiry={
+   enquiryid: 0,
+   name: '',
+   dob: '',
+   gender: '',
+   category: '',
+   email: '',
+   mobile: 0,
+   aadhar: 0,
+   annualfamilyincome: 0,
+   loanrangeAmount: 0,
+   enquiryStatus: '',
+   educationtype: '',
+   city: '',
+   pancard: ''
+ }
 
-  constructor(private com:CommonserviceService) { }
+  application:any;
+id:number
+  constructor(private com:CommonserviceService,private active:ActivatedRoute) {
+    this.active.paramMap.subscribe(s=>  
+      this.id=Number(s.get("id") )
+        )
+console.log(this.id,"New application id")
+   }
+
+   getEnquiry(){
+    this.com.getEnquiryByid(this.id).subscribe((data:any)=>{
+     this.enquiry=data
+    })
+   }
   bankdetails=new FormGroup({
     bankid:new FormControl('',[Validators.required]),
     bankAccNo:new FormControl('',[Validators.required]),

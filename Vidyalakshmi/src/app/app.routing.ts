@@ -11,6 +11,7 @@ import { CheckeligibilityModule } from './CheckEligibility/checkeligibility/chec
 import { LoanenquiryModule } from './Enquiry/loanenquiry/loanenquiry.module';
 import { LoginModule } from './login/login/login.module';
 import { RelationManagerModule } from './Modules/RlationMangaer/relation-manager/relation-manager.module';
+import { CreditManagerModule } from './Modules/Credit-Manager/credit-manager/credit-manager.module';
 
 
 const routes: Routes =[
@@ -25,6 +26,7 @@ const routes: Routes =[
      {path:'admin',loadChildren:()=>AdminModule},
      {path:'stu',loadChildren:()=>StudentModule},
      {path:'rema',loadChildren:()=>RelationManagerModule},
+     {path:'crema',loadChildren:()=>CreditManagerModule},
   ]}
 
 ];

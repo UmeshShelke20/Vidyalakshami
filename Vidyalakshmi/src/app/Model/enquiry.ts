@@ -11,6 +11,6 @@ export class Enquiry {
     loanrangeAmount:number;
     enquiryStatus:string
     educationtype:string
-    city:string
-
+    city:string;
+    pancard:string;
 }
