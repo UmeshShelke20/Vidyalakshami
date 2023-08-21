@@ -10,9 +10,7 @@ export class Menu {
 
             crema:[
                 {path: "creditManager", title: "Credit Manager", icon: "pe-7s-graph", class: "" },
-                {path: "checkapp", title: "Check application", icon: "pe-7s-graph", class: "" },
-                {path: "ckeckcbil", title: "ckeck cbil", icon: "pe-7s-graph", class: "" },
-                {path: "viewAllApp", title: "view All App", icon: "pe-7s-graph", class: "" },
+                {path: "viewAllApp", title: "view All Applications", icon: "pe-7s-graph", class: "" },
                
             ],
             admin:[

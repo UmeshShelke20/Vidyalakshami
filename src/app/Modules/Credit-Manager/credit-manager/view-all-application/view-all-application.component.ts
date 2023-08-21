@@ -18,5 +18,7 @@ export class ViewAllApplicationComponent implements OnInit {
 viewCompleteForm(n:number){
 this.router.navigateByUrl("role/crema/viewsingle/"+n)
 }
-
+checkCIBIL(n:string){
+  this.router.navigateByUrl("role/crema/ckeckcbil/"+n)
+}
 }

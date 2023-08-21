@@ -34,6 +34,9 @@
                                         Email
                                     </th>
                                     <th>
+                                        Pan NO.
+                                    </th>
+                                    <th>
                                         Mobile
                                     </th>
                                     <th>
@@ -45,8 +48,9 @@
                                     <th>
                                        View Complete Form
                                     </th>
-                                    
-
+                                    <th>
+                                        Check CIBIL
+                                     </th>
                                 </thead>
                                 <tbody>
                                     <tr *ngFor="let s of applications">
@@ -56,11 +60,12 @@
                                 <td>{{s.enquiryPersonalDetails.egender}}</td>
                                 <td>{{s.enquiryPersonalDetails.ecategory}}</td>
                                 <td>{{s.enquiryPersonalDetails.eemail}}</td>
+                                <td>{{s.gaurantorDetails.panno}}</td>
                                 <td>{{s.enquiryPersonalDetails.emobile}}</td>
                                 <td>{{s.enquiryPersonalDetails.address.state}}</td>
                                 <td>{{s.enquiryPersonalDetails.address.city}}</td>
                                 <td><button mat-raised-button color="primary" (click)="viewCompleteForm(s.applicationId)">View Complete Form</button></td>
-                                
+                                <td><button mat-raised-button color="primary" (click)="checkCIBIL(s.gaurantorDetails.panno)">Check CIBIL</button></td>
                                     </tr> 
                                 </tbody>
                             </table>

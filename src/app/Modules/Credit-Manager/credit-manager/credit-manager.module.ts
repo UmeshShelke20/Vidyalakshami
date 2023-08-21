@@ -18,7 +18,7 @@ import { CreditManagerComponent } from './credit-manager/credit-manager.componen
 const routes:Routes=[
   {path:'creditManager',component:CreditManagerComponent},
   {path:'checkapp',component:CheckApplicationComponent},
-  {path:'ckeckcbil',component:CheckCBILComponent},
+  {path:'ckeckcbil/:id',component:CheckCBILComponent},
   {path:'viewAllApp',component:ViewAllApplicationComponent},
   {path:'viewsingle/:id',component:ViewsingleApplicationComponent}
 ]

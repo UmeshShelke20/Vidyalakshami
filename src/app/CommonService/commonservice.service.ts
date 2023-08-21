@@ -3,6 +3,7 @@ import { HttpClient,HttpErrorResponse } from '@angular/common/http';
 import { Observable, catchError, throwError } from 'rxjs';
 import { Eligibility } from 'app/Model/eligibility';
 import { Enquiry } from 'app/Model/enquiry';
+import { CIBIL } from 'app/ApplicatioFormClassess/CIBIL/cibil';
 @Injectable({
   providedIn: 'root'
 })
@@ -32,5 +33,12 @@ export class CommonserviceService {
 
     viewform(n:number){
       return this.http.get(this.url+"viewform/"+n)
+    }
+    getCIBIL(cibil:CIBIL){
+    return this.http.post(this.url+"checkCibil/",cibil)
+    }
+
+    getpanno(n:number){
+    return this.http.get(this.url+"pan/"+n)
     }
 }
