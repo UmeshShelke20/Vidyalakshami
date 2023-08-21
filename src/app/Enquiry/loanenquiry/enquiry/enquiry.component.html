@@ -92,7 +92,7 @@
                                                       pancard required</div>
 
                                                 <div class="d-flex p-2 justify-content-between">
-                                                    <button  class="btn btn-success" (click)="onSubmit()">Submit Enquiry</button> 
+                                                    <button  class="btn btn-success" [disabled]="!enquiry.valid" (click)="onSubmit()">Submit Enquiry</button> 
                                                     
                                                   </div>
         </form>

@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { CommonserviceService } from 'app/CommonService/commonservice.service';
 import { Enquiry } from 'app/Model/enquiry';
 import { catchError, throwError } from 'rxjs';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-new-application',
   templateUrl: './new-application.component.html',
@@ -30,7 +31,7 @@ export class NewApplicationComponent implements OnInit {
 
   application:any;
 id:number
-  constructor(private com:CommonserviceService,private active:ActivatedRoute) {
+  constructor(private com:CommonserviceService,private active:ActivatedRoute, private router:Router) {
     this.active.paramMap.subscribe(s=>  
       this.id=Number(s.get("id") )
         )
@@ -269,8 +270,9 @@ this.reder.readAsDataURL(file);
       this.com.application(application1).pipe(catchError(this.handleError)).subscribe(response => {
         console.log(response,"Send Mail mananger");
         alert(response) ;
-        window.location.reload();
       });
+      this.router.navigateByUrl("role/rema/ViewAcceptedEnquiry");
+      window.location.reload();
     }
     
     private handleError(error: HttpErrorResponse) {

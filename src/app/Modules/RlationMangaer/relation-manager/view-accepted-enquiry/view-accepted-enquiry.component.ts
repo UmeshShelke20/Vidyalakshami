@@ -1,6 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Router, Routes } from '@angular/router';
+import { Router } from '@angular/router';
 import { CommonserviceService } from 'app/CommonService/commonservice.service';
 import { catchError, throwError } from 'rxjs';
 
