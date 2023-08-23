@@ -45,6 +45,7 @@ this.com.accepEnquiry(this.en).pipe(catchError(this.handleError)).subscribe(resp
   });
   }
 rejectEn(n:number){
+  this.en.enquiryid=n
  this.com.rejectEnquiry(this.en).pipe(catchError(this.handleError)).subscribe(response => {
   alert( response);
   window.location.reload();

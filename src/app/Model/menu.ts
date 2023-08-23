@@ -14,10 +14,10 @@ export class Menu {
                 {path: "viewEnquiry", title: "view All Enquiry", icon: "pe-7s-graph", class: "" },
                 
             ],
-            opma:[{path: "operational", title: "Credit Manager", icon: "pe-7s-graph", class: "" },
-            {path: "allnewapp", title: "Credit Manager", icon: "pe-7s-graph", class: "" },
-            {path: "allsacapp", title: "Credit Manager", icon: "pe-7s-graph", class: "" },
-            {path: "viewfullapp", title: "Credit Manager", icon: "pe-7s-graph", class: "" },
+            opma:[{path: "operational", title: "Operational Manager", icon: "pe-7s-graph", class: "" },
+            {path: "allnewapp", title: "All new Applications", icon: "pe-7s-graph", class: "" },
+            {path: "allsacapp", title: "All sanction Applications", icon: "pe-7s-graph", class: "" },
+            {path: "viewfullapp", title: "View full Applications", icon: "pe-7s-graph", class: "" },
             ],
 
 
