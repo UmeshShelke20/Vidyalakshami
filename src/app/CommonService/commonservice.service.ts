@@ -49,13 +49,15 @@ return this.http.put( this.url+"accepEnquiry/",n ,{responseType:'text'as 'json'}
 }
 
 rejectEnquiry(n:Enquiry){
-  return this.http.put(this.url+"rejectEnquiry/",n ,{responseType:'text'as 'json'} )
+return this.http.put(this.url+"rejectEnquiry/",n ,{responseType:'text'as 'json'} )
 }
 vewAcceptedEnquiry(){
-  return this.http.get(this.url+"vewAcceptedEnquiry")
+return this.http.get(this.url+"vewAcceptedEnquiry")
 }
 getEnquiryByid(n:number){
   return this.http.get(this.url+"getEnquiryByid/"+n)
 }
-
+getPendingApplication(){
+return this.http.get(this.url+"getallpendingApplication")
+}
 }

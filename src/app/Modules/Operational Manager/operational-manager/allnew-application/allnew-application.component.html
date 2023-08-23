@@ -1,1 +1,75 @@
-<p>allnew-application works!</p>
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title ">All New/Pending Applications</h4>
+                        <p class="card-category"> All Applications List</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                   
+                                    <th>
+                                        Application Id
+                                    </th>
+                                    <th>
+                                        Application Status
+                                    </th>
+                                    <th>
+                                        Applicant Name
+                                    </th>
+                                    <th>
+                                        Gender
+                                    </th>
+                                    <th>
+                                        Category
+                                    </th>
+                                    <th>
+                                        Email
+                                    </th>
+                                    <th>
+                                        Pan NO.
+                                    </th>
+                                    <th>
+                                        Mobile
+                                    </th>
+                                    <th>
+                                        State
+                                    </th>
+                                    <th>
+                                        City
+                                    </th>
+                                    <th>
+                                       View Complete Form
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let s of applications">
+                                <td>{{s.applicationId}}</td>
+                                <td>{{s.application_Status}}</td>
+                                <td>{{s.enquiryPersonalDetails.ename}}</td>
+                                <td>{{s.enquiryPersonalDetails.egender}}</td>
+                                <td>{{s.enquiryPersonalDetails.ecategory}}</td>
+                                <td>{{s.enquiryPersonalDetails.eemail}}</td>
+                                <td>{{s.gaurantorDetails.panno}}</td>
+                                <td>{{s.enquiryPersonalDetails.emobile}}</td>
+                                <td>{{s.enquiryPersonalDetails.address.state}}</td>
+                                <td>{{s.enquiryPersonalDetails.address.city}}</td>
+                                <td><button mat-raised-button color="primary" (click)="viewCompleteForm(s.applicationId)">View Complete Form</button></td>
+                                
+                               </tr> 
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+  
