@@ -1,4 +1,5 @@
 export class Document {
+	docId:number
     aadhar:[]
 	
 	pan:[]

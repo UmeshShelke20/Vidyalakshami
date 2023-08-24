@@ -9,7 +9,7 @@ import { CommonserviceService } from 'app/CommonService/commonservice.service';
 export class ViewsingleApplicationComponent implements OnInit {
   applications:any
   appId:number
-  constructor(private com :CommonserviceService,private active:ActivatedRoute) {
+  constructor(public com :CommonserviceService,private active:ActivatedRoute) {
 
     this.active.paramMap.subscribe(s=>  
     this.appId=Number(s.get("id")) 
@@ -18,7 +18,7 @@ export class ViewsingleApplicationComponent implements OnInit {
 
   ngOnInit(): void {
 this.com.viewform(this.appId).subscribe((data:any)=>{
-this.applications=data
+this.com.Application=data
 })
   }
 

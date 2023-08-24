@@ -17,16 +17,17 @@ import { CommonserviceService } from 'app/CommonService/commonservice.service';
 export class ViewformComponent implements OnInit {
   applications:any
   appId:number
-  constructor(private com :CommonserviceService,private active:ActivatedRoute) {
+  constructor(public com :CommonserviceService,private active:ActivatedRoute) {
     this.active.paramMap.subscribe(s=>  
     this.appId=Number(s.get("id")) 
       )
    }
 ngOnInit(): void {
 this.com.viewform(this.appId).subscribe((data:Application)=>{
-this.applications=Object.assign(data);
+this.com.Application=Object.assign(data);
+this.applications=this.com.Application
 })
-console.log(this.applications);
+console.log(this.com.Application.applicationId);
   }
 
 }

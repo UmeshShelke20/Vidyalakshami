@@ -6,11 +6,12 @@ import { EnquiryPersonalDetails } from "../EnquiryPersonalDetails/enquiry-person
 import { GaurantorDetails } from "../GaurantorDetails/gaurantor-details";
 
 export class Application {
-    applicationId:number
+    applicationId:number;
+	application_Status:string;
 	enquiryPersonalDetails: EnquiryPersonalDetails;
-	gaurantorDetails:GaurantorDetails
-	 educationDetails:EducationDetails
-	 educationPrevHistory:EducationPrevHistory
-	 documents:Document
-	  studentbankDetails:BankDetails
+	gaurantorDetails:GaurantorDetails;
+	 educationDetails:EducationDetails;
+	 educationPrevHistory:EducationPrevHistory;
+	 documents:Document;
+	  studentbankDetails:BankDetails;
 }
